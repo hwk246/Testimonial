@@ -1,0 +1,63 @@
+@import "./constants/_variables.scss";
+
+@mixin card-outline($heigth) {
+ height: $heigth;
+ width: 271px;
+ padding: 35px 25px;
+ box-shadow: 0px 10px 10px 0px rgb(134, 134, 134);
+}
+
+.card {
+ background: $page-background;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ margin-top: 50px;
+
+ &__card-top {
+  @include card-outline(220px); /*height veriable*/
+  background-color: $text-background;
+  border-radius: $border-radius $border-radius 0 0;
+
+  & p {
+   font-weight: $font-weight;
+   line-height: 27px;
+  }
+ }
+
+ &__card-bottom {
+  @include card-outline(80px); /*height veriable*/
+  background: $footer-background;
+  border-radius: 0 0 $border-radius $border-radius;
+
+  & img {
+   position: relative;
+   border-radius: 50%;
+   height: 100px;
+   top: -90px;
+   left: 80px;
+   border: 5px solid white;
+  }
+
+  & h2 {
+   font-weight: $font-weight;
+   text-transform: uppercase;
+   margin-top: 0;
+   text-align: center;
+   position: relative;
+   bottom: 87px;
+   font-size: 1.3em;
+   color: white;
+  }
+
+  & a {
+   color: $page-background;
+   font-weight: $font-weight;
+   position: relative;
+   left: 60px;
+   bottom: 100px;
+   text-decoration: none;
+  }
+ }
+}
